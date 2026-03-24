@@ -20,7 +20,7 @@
 
             @keyframes typewriter {
                 from { width: 0; }
-                to { width: 100%; }
+                to { width: 19ch; }  /* ← usa ch invece di 100% */
             }
 
             @keyframes fade-up {
@@ -28,12 +28,12 @@
                 to { opacity: 1; transform: translateY(0); }
             }
 
-            typewriter {
+            .typewriter {
                 display: inline-block;
                 overflow: hidden;
                 white-space: nowrap;
                 width: 0;
-                animation: typewriter 1.8s steps(22) 0.4s forwards;
+                animation: typewriter 1.8s steps(19) 0.4s forwards;
             }
 
             .cursor::after {
