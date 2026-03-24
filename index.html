@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Matteo Maggioni — Developer</title>
+
+        <link rel="preconnect" href="https://fonts.bunny.net">
+        <link href="https://fonts.bunny.net/css?family=jetbrains-mono:400,700&display=swap" rel="stylesheet" />
+
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <style>
+            * { font-family: 'JetBrains Mono', monospace; }
+
+            @keyframes blink {
+                0%, 100% { opacity: 1; }
+                50% { opacity: 0; }
+            }
+
+            @keyframes typewriter {
+                from { width: 0; }
+                to { width: 100%; }
+            }
+
+            @keyframes fade-up {
+                from { opacity: 0; transform: translateY(16px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+
+            .typewriter {
+                display: inline-block;
+                overflow: hidden;
+                white-space: nowrap;
+                width: 0;
+                animation: typewriter 1.8s steps(22) 0.4s forwards;
+            }
+
+            .cursor::after {
+                content: '\25ae';
+                animation: blink 1s step-end infinite;
+                margin-left: 2px;
+                color: #7ee787;
+            }
+
+            .fade-up {
+                opacity: 0;
+                animation: fade-up 0.7s ease forwards;
+            }
+
+            .delay-1 { animation-delay: 2.4s; }
+            .delay-2 { animation-delay: 2.8s; }
+            .delay-3 { animation-delay: 3.2s; }
+
+            .scanline {
+                position: fixed;
+                inset: 0;
+                pointer-events: none;
+                background: repeating-linear-gradient(
+                    to bottom,
+                    transparent,
+                    transparent 3px,
+                    rgba(0, 0, 0, 0.04) 3px,
+                    rgba(0, 0, 0, 0.04) 4px
+                );
+                z-index: 100;
+            }
+
+            .project-img {
+                filter: grayscale(30%);
+                transition: filter 0.4s ease, transform 0.4s ease;
+            }
+
+            .project-img:hover {
+                filter: grayscale(0%);
+                transform: scale(1.02);
+            }
+        </style>
+    </head>
+    <body class="bg-[#0d1117] text-[#c9d1d9]">
+
+        <div class="scanline"></div>
+
+        <!-- Hero -->
+        <section class="min-h-screen flex items-center justify-center px-6 relative">
+            <div class="max-w-3xl w-full">
+                <p class="text-[#3fb950] text-xs tracking-widest mb-6 uppercase">// portfolio v1.0.0</p>
+
+                <div class="mb-2 flex items-baseline gap-2">
+                    <span class="text-[#3fb950] text-2xl select-none">&#10095;</span>
+                    <span class="typewriter text-3xl sm:text-5xl font-bold text-white">I'm Matteo Maggioni</span>
+                </div>
+
+                <p class="fade-up delay-1 text-[#8b949e] text-lg sm:text-2xl mt-4 pl-8">
+                    <span class="text-[#ff7b72]">function</span>
+                    <span class="text-[#d2a8ff]"> whoAmI</span>
+                    <span class="text-white">()</span>
+                    <span class="text-white"> {</span>
+                    <br>
+                    <span class="pl-6 text-[#8b949e]">
+                        <span class="text-[#ff7b72]">return</span>
+                        <span class="text-[#a5d6ff]"> &quot;full-stack developer&quot;</span><span class="cursor"></span>
+                    </span>
+                    <br>
+                    <span class="text-white">}</span>
+                </p>
+
+                <p class="fade-up delay-2 text-[#484f58] text-sm mt-8 pl-8 leading-7 max-w-xl">
+                    // I build fast, minimal web applications.<br>
+                    // Obsessed with clean architecture and pixel-perfect UIs.<br>
+                    // Open to interesting problems.
+                </p>
+
+                <nav class="fade-up delay-3 mt-12 pl-8 flex gap-8 text-sm">
+                    <a href="www.linkedin.com/in/matteo-maggioni-94654b185" target="_blank" rel="noopener noreferrer" class="text-[#58a6ff] hover:text-white transition-colors duration-200">
+                        <span class="text-[#484f58]">01.</span> linkedin
+                    </a>
+                </nav>
+            </div>
+
+        </section>
+
+        <!-- Footer -->
+        <footer class="py-12 px-6 border-t border-[#21262d]">
+            <div class="max-w-5xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-[#484f58] text-xs">
+                <p>&copy; 2026 Matteo Maggioni</p>
+                <p></p>
+            </div>
+        </footer>
+
+    </body>
+</html>
